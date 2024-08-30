@@ -1,0 +1,376 @@
+body {
+	font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
+	min-height: 100vh;
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: max-content auto 1.5em;
+	background: rgba(142, 166, 211, 0.8);
+	/*background-image: url('kwd-tm-v71a.webp');*/
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	max-width: 100%;
+	top: 0em;
+	left: 0;
+	margin: auto;
+	padding: 0;
+	overflow: auto;
+}
+header,
+footer {
+	display: grid;
+	place-items: center;
+	background: rgba(142, 166, 211, 0.8);
+	font-weight: bold;
+	padding: 0.25rem;
+	z-index: 6;
+}
+
+nav {
+	display: grid;
+	grid-template-columns: auto;
+	place-items: start center;
+	overflow-x: auto;
+	overflow-y: auto;
+	background: rgba(142, 166, 211, 0.8);
+	padding: 0 1rem;
+	z-index: 5;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+li {
+	position: static;
+	padding: .25em;
+	background: lightgrey;
+}
+
+li,
+ul {
+	margin: 1px;
+}
+
+li .wrapper li {
+	padding: 0.25em;
+}
+
+h1,
+h2,
+h2 a {
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+}
+h1 { font-size: 2rem; margin: .25rem;}
+h2 { margin: .25rem;}
+#timetick,
+#spinny,
+#author {
+	background: rgba(142, 166, 211, 1);
+	margin: auto;
+}
+#timetick {
+	position: absolute;
+	left: 5px;
+}
+#spinny {
+	place-items: center;
+	text-align: center;
+	left: 50%;
+	min-width: 1.25rem;
+}
+#author {
+	position: absolute;
+	right: 5px;
+}
+
+p {
+	font-size: 1.125rem;
+}
+
+nav ul,
+nav a,
+.submit,
+#connected {
+	list-style-type: none;
+	padding: 0.25rem;
+	margin: 0;
+	color: inherit;
+	background: lightgrey;
+	font-size: 1.125rem;
+}
+
+.submit,
+#connected {
+	margin: 0.25rem;
+}
+.scrollmenu {
+	background: rgba(142, 166, 211, 0);
+	padding:0;
+	margin:0;
+	text-align: center;
+}
+
+li:hover, li:focus, li:focus-within,
+#scrollmenu > ul > li:hover, #scrollmenu > ul > li:focus, #scrollmenu > ul > li:focus-within,
+li:hover >a, li:focus >a, li:focus-within >a,
+.submit:hover, .submit:focus, .submit:focus-within,
+input:hover, input:focus, input:focus-within {
+	background-color: yellow;
+	color: black;
+	cursor: pointer;
+}
+
+#scrollmenu > ul > li {
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	border-style: solid;
+	border-width: 1px;
+	background: lightgrey;
+}
+
+.wrapper > ul {
+	max-height: 25rem;
+	text-align: left;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: 2px 3px;
+}
+
+.wrapper >ul >li >a >img {
+	height:16px;
+	width:16px;
+	margin: 0 .25em 0 0;
+}
+
+.wrapper {
+	white-space: nowrap;
+	position: absolute;
+	margin: 0;
+	transition: 480ms all 320ms ease-out;
+	transform: rotateX(-90deg);
+	transform-origin: top center;
+	visibility: hidden;
+	border-style: solid;
+	border-width: 1px;
+}
+
+li:hover >.wrapper, li:focus >.wrapper, li:focus-within >.wrapper {
+	opacity: 1;
+	transform: rotateX(0);
+	visibility: visible;
+}
+
+#channels {
+        white-space: nowrap;
+}
+#channelsel {
+	max-width: 15rem;
+}
+#shift,
+#mode {
+	max-width: 4rem;
+}
+#tone {
+	max-width: 5rem;
+}
+#rbmenuinfo {
+        position:absolute;
+        left:2px;
+        top:3px;
+        padding:0;
+        margin:0;
+        z-index:10;
+        cursor: pointer;
+}
+
+#imgwx5fwd {
+	position:absolute;
+	left:2px;
+	top:3px;
+	width:60px;
+	height:59px;
+	padding:0;
+	margin:0;
+	z-index:0;
+	cursor: pointer;
+}
+
+#imgnws {
+	position:absolute;
+	right:2px;
+	top:3px;
+	width:60px;
+	height:59px;
+	padding:0;
+	margin:0;
+	z-index:0;
+	cursor: pointer;
+}
+
+input[type=range] {
+	-webkit-appearance: none;
+	margin: 0 .5em .25em .5em;
+	padding: 0px;
+	vertical-align: middle;
+}
+input[type=range]:focus {
+	outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 5px;
+	cursor: pointer;
+	animate: 0.2s;
+	box-shadow: 0px 0px 0px #000000;
+	background: #B6B6B6;
+	border-radius: 25px;
+	border: 1px solid #8A8A8A;
+}
+input[type=range]::-webkit-slider-thumb {
+	box-shadow: 1px 1px 1px #828282;
+	border: 1px solid #8A8A8A;
+	height: 14px;
+	width: 25px;
+	border-radius: 6px;
+	background: #DADADA;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -5px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+	background: #B6B6B6;
+}
+input[type=range]::-moz-range-track {
+	width: 100%;
+	height: 16px;
+	cursor: pointer;
+	animate: 0.2s;
+	box-shadow: 0px 0px 0px #000000;
+	background: #B6B6B6;
+	border-radius: 25px;
+	border: 1px solid #8A8A8A;
+}
+input[type=range]::-moz-range-thumb {
+	box-shadow: 1px 1px 1px #828282;
+	border: 1px solid #8A8A8A;
+	height: 24px;
+	width: 35px;
+	border-radius: 6px;
+	background: #DADADA;
+	cursor: pointer;
+}
+input[type=range]::-ms-track {
+	width: 100%;
+	height: 16px;
+	cursor: pointer;
+	animate: 0.2s;
+	background: transparent;
+	border-color: transparent;
+	color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+	background: #B6B6B6;
+	border: 1px solid #8A8A8A;
+	border-radius: 50px;
+	box-shadow: 0px 0px 0px #000000;
+}
+input[type=range]::-ms-fill-upper {
+	background: #B6B6B6;
+	border: 1px solid #8A8A8A;
+	border-radius: 50px;
+	box-shadow: 0px 0px 0px #000000;
+}
+input[type=range]::-ms-thumb {
+	margin-top: 1px;
+	box-shadow: 1px 1px 1px #828282;
+	border: 1px solid #8A8A8A;
+	height: 24px;
+	width: 35px;
+	border-radius: 6px;
+	background: #DADADA;
+	cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+	background: #B6B6B6;
+}
+input[type=range]:focus::-ms-fill-upper {
+	background: #B6B6B6;
+}
+#sqcontrols {
+        white-space: nowrap;
+        display: inline-block;
+}
+#squelchDW,
+#squelchUP,
+#squelchlabel {
+        margin-left:0.1rem;
+        margin-right:0.1rem;
+}
+table.gridtable {
+    font-family: verdana,arial,sans-serif;
+    font-size: 12px;
+    color: black;
+    padding: 4px;
+    border-width: 1px;
+    border-color: black;
+    border-collapse: collapse;
+}
+
+table.gridtable th {
+    border-width: 1px;
+    padding: 4px;
+    border-style: solid;
+    border-color: black;
+    background-color: lightgray;
+    font-size: 12px;
+}
+
+table.gridtable td {
+    border-width: 1px;
+    padding: 4px;
+    border-style: solid;
+    border-color: black;
+    background-color: #ffffff;
+    font-size: 11px;
+}
+
+table.gridtable tr.rColor td {
+    background-color: maroon;
+    font-weight: bold;
+    color: yellow;
+}
+
+table.gridtable tr.cColor td {
+    background-color: red;
+    font-weight: bold;
+    color: yellow;
+}
+
+table.gridtable tr.bColor td {
+    background-color: palegreen;
+    font-weight: bold;
+    color: black;
+}
+
+table.gridtable tr.gColor td {
+    background-color: lightgray;
+    font-weight: bold;
+    color: black;
+}
+
+table.gridtable tr.tColor td {
+    background-color: powderblue;
+    font-weight: bold;
+    color: black;
+}
+
+table.gridtable tr.lColor td {
+    background-color: lemonchiffon;
+    font-weight: bold;
+    color: black;
+}
