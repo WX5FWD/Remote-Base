@@ -4,22 +4,22 @@
 // ONLY change text between quotes
 //
 // Your callsign Only:
-$CALL = "WX5FWD";
+$CALL = "?????";
 //
 // Your Allstar node number:
-$NODE = "473546";
+$NODE = "12345";
 //
 // Audio archive
 $ARCHIVE_URL="/archive/$NODE/";
 //
 // Your location:
-$LOCATION = "Roof NWS";
+$LOCATION = "NWS";
 //
 // Grid Square
 $GRID = "EM12iu";
 //
 //Supermon URL
-$SMURL="https://$NODE.wx5fwd.org/supermon/link.php?nodes=$NODE";
+$SMURL="https://$NODE.somewhere.org/supermon/link.php?nodes=$NODE";
 //
 $HEADING = "$LOCATION Remote Base - $CALL";
 //
@@ -27,7 +27,7 @@ $HEADING = "$LOCATION Remote Base - $CALL";
 $TITLE = "Allstar Node <a href='$SMURL' target='_blank' title='Node Info'>$NODE</a> $GRID";
 //
 // Third line header title:
-$TITLE2 = "15ft Roof Antenna";
+$TITLE2 = "Roof Antenna";
 //
 // Background image - specify path if not /var/www/html/rb
 // Leaving BACKGROUND null "" results in BACKGROUND_COLOR:
