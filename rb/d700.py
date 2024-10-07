@@ -20,7 +20,7 @@ getcontext().prec = 10
 environ["TERM"] = "dumb"
 
 # A few global constants
-ASLNODE='590981'	# Change to your Allstar node. This is required for --nodes, --cop49 and --cop50.
+ASLNODE='...'	# Change to your Allstar node. This is required for --nodes, --cop49 and --cop50.
 global ser
 BAUD='9600'         # 9600, 19200, 38400, 57600
 BAND='0'
